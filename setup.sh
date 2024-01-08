@@ -1,6 +1,6 @@
 #!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaiVPN"
+GitUser="KhaiVpn767"
 # Color Validation
 Lred='\e[1;91m'
 Lgreen='\e[92m'
