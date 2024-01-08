@@ -14,19 +14,15 @@ green='\e[0;32m'
 NC='\e[0m'
 #IZIN SCRIPT
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "                                                              "
-echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
-echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By khaiVPN"$NC
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @khaivpn"$NC
-echo -e "$green.........................................................."$NC
-echo ''
-echo -e "$Lyellow                       Wait 6 Seconds!"$NC
-echo -e "$green.........................................................."$NC
-sleep 6
+echo -e ""
+echo -e "\e[94m              .-----------------------------------------------.    "
+echo -e "\e[94m              |          Installing Autoscript Begin          |    "
+echo -e "\e[94m              '-----------------------------------------------'    "
+echo -e "\e[0m"
+echo ""
+sleep 1
 # Insert Password
-Password=khaivpnking02
+Password=khaivpn
 # Execute
 read -p "Please Insert The License Key : " Passwordnya
 if [ $Password = $Passwordnya ]; then
