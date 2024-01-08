@@ -1,6 +1,35 @@
 #!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+GitUser="khaiVPN"
+# Color Validation
+Lred='\e[1;91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
+green='\e[32m'
+RED='\033[0;31m'
+NC='\033[0m'
+BGBLUE='\e[1;44m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0;37m'
+# ===================
+echo ''
+clear
+echo ''
+echo "                                                              "
+echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
+echo -e "$green.........................................................."$NC
+echo -e "$Lyellow                  Autoscript By khaiVPN"$NC
+echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
+echo -e "$Lyellow                       @khaivpn"$NC
+echo -e "$green.........................................................."$NC
+echo ''
+echo -e "$Lyellow                       Wait 6 Seconds!"$NC
+echo -e "$green.........................................................."$NC
+sleep 6
+clear
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
@@ -13,35 +42,44 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 #IZIN SCRIPT
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo -e ""
-echo -e "\e[94m              .-----------------------------------------------.    "
-echo -e "\e[94m              |          Installing Autoscript Begin          |    "
-echo -e "\e[94m              '-----------------------------------------------'    "
-echo -e "\e[0m"
-echo ""
-sleep 1
-# Insert Password
-Password=khaivpn
-# Execute
-read -p "Please Insert The License Key : " Passwordnya
-if [ $Password = $Passwordnya ]; then
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m"
 clear
-echo -e ""
-echo -e "${green}Permission Accepted...${NC}"
-echo ""
-echo "Thanks For Using This Autoscript-Lite By khaivpn"
-echo ""
-sleep 3
+# Valid Script
+VALIDITY() {
+    today=$(date -d "0 days" +"%Y-%m-%d")
+    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT khaiVPN..\e[0m"
+        sleep 5
+    else
+        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
+        echo -e "\e[31mPlease renew your ipvps first\e[0m"
+        exit 0
+    fi
+}
+# Valid Script
+VALIDITY() {
+    today=$(date -d "0 days" +"%Y-%m-%d")
+    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT khaiVPN..\e[0m"
+        sleep 5
+    else
+        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
+        echo -e "\e[31mPlease renew your ipvps first\e[0m"
+        exit 0
+    fi
+}
+IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+    echo -e "\e[32mPermission Accepted...\e[0m"
+    VALIDITY
 else
-clear
-echo -e "${red}Permission Denied!${NC}";
-echo -e "${red}Please Insert The Correct License Key !${NC}"
-echo ""
-echo -e "Please Contact ${green}Admin${NC}"
-echo -e "Telegram : t.me/KhaiVpn767"
-rm -f setup2.sh
-exit 0
+    echo -e "\e[31mPermission Denied!\e[0m"
+    echo -e "\e[31mPlease buy script first\e[0m"
+    rm -f setup.sh
+    exit 0
 fi
 clear
 echo -e "\e[32mloading...\e[0m"
@@ -92,12 +130,12 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 fi
