@@ -92,12 +92,12 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 fi
