@@ -26,7 +26,7 @@ echo -e "$Lyellow                       Wait 6 Seconds!"$NC
 echo -e "$green.........................................................."$NC
 sleep 6
 # Insert Password
-Password=khaivpnking
+Password=khaivpnking02
 # Execute
 read -p "Please Insert The License Key : " Passwordnya
 if [ $Password = $Passwordnya ]; then
