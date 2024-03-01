@@ -66,7 +66,7 @@ cd
 cat > /etc/systemd/system/ohp.service <<END
 [Unit]
 Description=Direct Squid Proxy For OpenVPN TCP
-Documentation=https://t.me/khaivpn
+Documentation=https://t.me/todfix667
 Wants=network.target
 After=network.target
 
