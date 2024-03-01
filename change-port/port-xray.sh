@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 
 # // IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)

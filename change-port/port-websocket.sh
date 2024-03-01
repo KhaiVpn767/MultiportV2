@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -57,7 +58,7 @@ rm -f /etc/systemd/system/cdn-dropbear.service
 cat > /etc/systemd/system/cdn-dropbear.service <<END
 [Unit]
 Description=Python WS-Dropbear
-Documentation=https://nevermore.me
+Documentation=https://KhaiVpn767.me
 After=network.target nss-lookup.target
 
 [Service]
@@ -112,7 +113,7 @@ rm -f /etc/systemd/system/cdn-ovpn.service
 cat > /etc/systemd/system/cdn-ovpn.service <<END
 [Unit]
 Description=Python WS-Ovpn 
-Documentation=https://nevermore.me
+Documentation=https://KhaiVpn767.me
 After=network.target nss-lookup.target
 
 [Service]
