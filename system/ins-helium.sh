@@ -1,4 +1,5 @@
-#Autoscript By khaVPN
+#!/bin/bash
+#Autoscript By KhaiVpn767
 red='\e[1;31m'
 green='\e[0;32m'
 purple='\e[0;35m'
@@ -14,7 +15,7 @@ if [[ -e /usr/local/sbin/helium ]]; then
 else
 
 rm -rf /usr/local/sbin/helium
-wget -q -O /usr/local/sbin/helium https://raw.githubusercontent.com/khaVPN/MultiportV2/main/helium.sh
+wget -q -O /usr/local/sbin/helium https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/helium.sh
 chmod +x /usr/local/sbin/helium
 helium
 

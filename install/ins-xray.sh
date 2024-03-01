@@ -1,6 +1,6 @@
 #!/bin/bash
 # // wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 
 # // MY IPVPS
 export MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -66,7 +66,7 @@ systemctl stop nginx
 
 # // INSTALL CERTIFICATES
 mkdir /root/.acme.sh
-curl https://raw.githubusercontent.com/khaVPN/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
+curl https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
@@ -131,17 +131,17 @@ cat> /usr/local/etc/xray/config.json << END
                         "xver": 1
                     },
                     {
-                        "path": "/nevermore-vlesswstls", # // VMESS WS TLS
+                        "path": "/KhaiVpn767-vlesswstls", # // VMESS WS TLS
                         "dest": 1212,
                         "xver": 1
                     },
                     {
-                        "path": "/nevermore-vmesswstls", # // VLESS WS TLS
+                        "path": "/KhaiVpn767-vmesswstls", # // VLESS WS TLS
                         "dest": 1213,
                         "xver": 1
                     },
                     {
-                        "path": "/nevermore-trojanwstls", # // TROJAN WS TLS
+                        "path": "/KhaiVpn767-trojanwstls", # // TROJAN WS TLS
                         "dest": 1214,
                         "xver": 1
                     }
@@ -387,7 +387,7 @@ cat> /usr/local/etc/xray/vless.json << END
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/nevermore-vlesswstls"
+                    "path": "/KhaiVpn767-vlesswstls"
                 }
             }
         }
@@ -497,7 +497,7 @@ cat> /usr/local/etc/xray/vlessnone.json << END
          "network": "ws",
             "wsSettings": {
               "acceptProxyProtocol": true,
-                "path": "/nevermore-vlesswsntls"
+                "path": "/KhaiVpn767-vlesswsntls"
 
                 }
             }
@@ -611,7 +611,7 @@ cat> /usr/local/etc/xray/vmess.json << END
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/nevermore-vmesswstls"
+                    "path": "/KhaiVpn767-vmesswstls"
                 }
             }
         }
@@ -721,7 +721,7 @@ cat> /usr/local/etc/xray/vmessnone.json << END
          "network": "ws",
             "wsSettings": {
               "acceptProxyProtocol": true,
-                "path": "/nevermore-vmesswsntls"
+                "path": "/KhaiVpn767-vmesswsntls"
                 }
             }
         }
@@ -833,7 +833,7 @@ cat> /usr/local/etc/xray/trojan.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/nevermore-trojanwstls"
+               "path": "/KhaiVpn767-trojanwstls"
              }
           }
        }
@@ -944,7 +944,7 @@ cat> /usr/local/etc/xray/trojannone.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/nevermore-trojanwsntls"
+               "path": "/KhaiVpn767-trojanwsntls"
              }
           }
        }
@@ -1054,17 +1054,17 @@ cat> /usr/local/etc/xray/none.json << END
             "xver": 1
           },
           {
-            "path": "/nevermore-vlesswsntls", # // VLESS NONE
+            "path": "/KhaiVpn767-vlesswsntls", # // VLESS NONE
             "dest": 1301,
             "xver": 1
           },
           {
-            "path": "/nevermore-vmesswsntls", # // VMESS NONE
+            "path": "/KhaiVpn767-vmesswsntls", # // VMESS NONE
             "dest": 1302,
             "xver": 1
           },
           {
-             "path": "/nevermore-trojanwsntls", # // TROJAN NONE
+             "path": "/KhaiVpn767-trojanwsntls", # // TROJAN NONE
             "dest": 1303,
             "xver": 1
           }

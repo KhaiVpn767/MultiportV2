@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1

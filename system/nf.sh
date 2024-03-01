@@ -1,3 +1,4 @@
+#!/bin/bash
 shell_version="3.0";
 UA_Browser="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36";
 
@@ -13,7 +14,7 @@ Font_Suffix="\033[0m";
 
 
 clear;
-echo -e "  \033[1;37m${Font_Purple}Media Stream Unlocker Test Mod By khaVPN${Font_Suffix}\033[0m";
+echo -e "  \033[1;37m${Font_Purple}Media Stream Unlocker Test Mod By KhaiVpn767${Font_Suffix}\033[0m";
 echo -e "  \033[1;37mVersion : ${Font_SkyBlue}${shell_version}${Font_Suffix}\033[0m";
 echo -e "  \033[1;37mTime    : $(date)\033[0m"
 

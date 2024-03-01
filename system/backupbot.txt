@@ -3,7 +3,7 @@
 # =========================================
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
-# Auther  : khaVPN
+# Auther  : KhaiVpn767
 # (C) Copyright 2022
 # =========================================
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }

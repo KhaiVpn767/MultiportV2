@@ -2,7 +2,7 @@
 # =========================================
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
-# Auther  : khaVPN
+# Auther  : KhaiVpn767
 # (C) Copyright 2022
 # =========================================
 
@@ -15,7 +15,7 @@ clear
 IP=$(wget -qO- icanhazip.com);
 date=$(date +"%Y-%m-%d")
 clear
-echo " VPS Data Backup By khaVPN "
+echo " VPS Data Backup By KhaiVpn767 "
 sleep 1
 echo ""
 echo -e "[ ${green}INFO${NC} ] Please Insert Password To Secure Backup Data ."
@@ -49,8 +49,8 @@ url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 clear
-echo -e "\033[1;37mVPS Data Backup By khaVPN\033[0m
-\033[1;37mTelegram : https://t.me/khaivpn / @khaVPN\033[0m"
+echo -e "\033[1;37mVPS Data Backup By KhaiVpn767\033[0m
+\033[1;37mTelegram : https://t.me/khaivpn / @KhaiVpn767\033[0m"
 echo ""
 echo "Please Copy Link Below & Save In Notepad"
 echo ""

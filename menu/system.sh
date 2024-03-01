@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -113,13 +114,13 @@ htop
 message-ssh
 ;;
 77)
-wget https://raw.githubusercontent.com/khaVPN/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 ;;
 88)
-wget https://raw.githubusercontent.com/khaVPN/Vergil/main/Tunnel/udp.sh && bash udp.sh
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
 ;;
 99)
-mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/khaVPN/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
+mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
 ;;
 x)
 menu

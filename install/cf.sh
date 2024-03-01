@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Valid Script
@@ -25,10 +26,10 @@ exit 0
 fi
 clear
 apt install jq curl -y
-DOMAIN=nevermore-vpn.do
+DOMAIN=KhaiVpn767-vpn.do
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.nevermore.me
-CF_ID=nevermore2601@gmail.com
+SUB_DOMAIN=${sub}.KhaiVpn767.me
+CF_ID=khaVPN2601@gmail.com
 CF_KEY=14b348d2fd20de44e30e5c02a6ede439d6af8
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);

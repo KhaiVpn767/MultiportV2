@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 echo Installing Websocket-SSH Python
 sleep 1
@@ -6,14 +7,14 @@ sleep 0.5
 cd
 
 # // GIT USER
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 namafolder="websocket-python"
 
 # // SYSTEM WEBSOCKET HTTPS 443
 cat <<EOF> /etc/systemd/system/ws-https.service
 [Unit]
 Description=Python Proxy
-Documentation=https://github.com/khaVPN/
+Documentation=https://github.com/KhaiVpn767/
 After=network.target nss-lookup.target
 
 [Service]
@@ -33,7 +34,7 @@ EOF
 cat <<EOF> /etc/systemd/system/ws-http.service
 [Unit]
 Description=Python Proxy
-Documentation=https://github.com/khaVPN/
+Documentation=https://github.com/KhaiVpn767/
 After=network.target nss-lookup.target
 
 [Service]
@@ -52,7 +53,7 @@ EOF
 cat <<EOF> /etc/systemd/system/ws-ovpn.service
 [Unit]
 Description=Python Proxy
-Documentation=https://github.com/khaVPN/
+Documentation=https://github.com/KhaiVpn767/
 After=network.target nss-lookup.target
 
 [Service]

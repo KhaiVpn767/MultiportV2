@@ -1,3 +1,4 @@
+#!/bin/bash
 #!/usr/bin/env python
 
 # Try to determine how much RAM is currently being used per program.

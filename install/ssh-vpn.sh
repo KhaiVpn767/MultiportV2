@@ -1,6 +1,7 @@
+#!/bin/bash
 # ==================================================
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 
 # // initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -14,10 +15,10 @@ ver=$VERSION_ID
 country="MY"
 state="Kuala_Lumpur"
 locality="Kuala_Lumpur"
-organization="@khaivpn"
-organizationalunit="@khaivpn"
-commonname="nevermore"
-email="admin@nevermore.com"
+organization="@todfix667"
+organizationalunit="@todfix667"
+commonname="KhaiVpn767"
+email="admin@KhaiVpn767.com"
 
 # // simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/password"
@@ -144,7 +145,7 @@ sed -i $MYIP2 /etc/squid/squid.conf
 apt -y install vnstat
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
-wget https://github.com/khaVPN/addons/releases/download/vnstat-2.6/vnstat-2.6.tar.gz
+wget https://github.com/KhaiVpn767/addons/releases/download/vnstat-2.6/vnstat-2.6.tar.gz
 tar zxvf vnstat-2.6.tar.gz
 cd vnstat-2.6
 ./configure --prefix=/usr --sysconfdir=/etc && make && make install

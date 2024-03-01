@@ -1,5 +1,6 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
 wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/rclone.conf"

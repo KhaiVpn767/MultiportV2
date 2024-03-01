@@ -1,6 +1,6 @@
 #!/bin/bash
 # // wget https://github.com/${GitUser}/
-GitUser="khaVPN"
+GitUser="KhaiVpn767"
 
 # // MY IPVPS
 export MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -66,7 +66,7 @@ systemctl stop nginx
 
 # // INSTALL CERTIFICATES
 mkdir /root/.acme.sh
-curl https://raw.githubusercontent.com/khaVPN/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
+curl https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
@@ -141,7 +141,7 @@ cat> /usr/local/etc/xray/config.json << END
                         "xver": 1
                     },
                     {
-                        "path": "/nevermore-trojanwstls", # // TROJAN WS TLS
+                        "path": "/KhaiVpn767-trojanwstls", # // TROJAN WS TLS
                         "dest": 1214,
                         "xver": 1
                     }
@@ -833,7 +833,7 @@ cat> /usr/local/etc/xray/trojan.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/nevermore-trojanwstls"
+               "path": "/KhaiVpn767-trojanwstls"
              }
           }
        }
@@ -944,7 +944,7 @@ cat> /usr/local/etc/xray/trojannone.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/nevermore-trojanwsntls"
+               "path": "/KhaiVpn767-trojanwsntls"
              }
           }
        }
@@ -1064,7 +1064,7 @@ cat> /usr/local/etc/xray/none.json << END
             "xver": 1
           },
           {
-             "path": "/nevermore-trojanwsntls", # // TROJAN NONE
+             "path": "/KhaiVpn767-trojanwsntls", # // TROJAN NONE
             "dest": 1303,
             "xver": 1
           }

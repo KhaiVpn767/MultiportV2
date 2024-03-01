@@ -1,3 +1,4 @@
+#!/bin/bash
 clear -x
 
 if ! command -v resolvconf >/dev/null; then
