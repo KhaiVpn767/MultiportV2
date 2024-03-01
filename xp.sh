@@ -2,7 +2,7 @@
 # =========================================
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
-# Auther  : NevermoreSSH
+# Auther  : KhaiVpn767
 # (C) Copyright 2022
 # =========================================
 clear
@@ -92,7 +92,7 @@ systemctl restart xray.service
 fi
 done
 
-echo -e " Delete Exp User Xray Success (Nevermore)"
+echo -e " Delete Exp User Xray Success (KhaiVpn767)"
 echo 
 echo -e " Back To Menu In 2 Sec"
 sleep 2

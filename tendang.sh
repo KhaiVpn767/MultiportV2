@@ -1,3 +1,4 @@
+#!/bin/bash
 # Script VPS
 #!/bin/bash
 clear

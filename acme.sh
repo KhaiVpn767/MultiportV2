@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 VER=3.0.2
 
