@@ -225,18 +225,9 @@ status="$(systemctl show server-sldns.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
-echo -e " DNSTT                   : "$green"running"$NC" ✓"
+echo -e " SlowDNS                   : "$green"running"$NC" ✓"
 else
-echo -e " DNSTT                   : "$red"not running (Error)"$NC" "
-fi
-
-status="$(systemctl show client-sldns.service --no-page)"
-status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status_text}" == "active" ]
-then
-echo -e " SlowDNS                 : "$green"running"$NC" ✓"
-else
-echo -e " SlowDNS                 : "$red"not running (Error)"$NC" "
+echo -e " SlowDNS                   : "$red"not running (Error)"$NC" "
 fi
 
 status="$(systemctl show udp-custom.service --no-page)"
