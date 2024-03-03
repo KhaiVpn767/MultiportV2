@@ -853,19 +853,168 @@ else
 sts=$bug_addr
 fi
 
-export exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-export harini=`date -d "0 days" +"%Y-%m-%d"`
-
-sed -i '/#xray-vless-tls$/a\#vls '"$user $exp $harini $uuid"'\
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+harini=`date -d "0 days" +"%Y-%m-%d"`
+sed -i '/#tls$/a\### '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/vless.json
-sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/vlessnone.json
+sed -i '/#none$/a\### '"$user $exp $harini $uuid"'\
+},{"id": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/vnone.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+cat > /usr/local/etc/xray/$user-VLESS-WS.yaml <<EOF
+# CONFIG CLASH VLESS
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: global
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+proxies:
+  - name: DIGI-APN-${user}
+    server: api.useinsider.com
+    port: $none
+    type: vless
+    uuid: ${uuid}
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ${sts}${domain}
+    network: ws
+    ws-opts:
+      path: $patch
+      headers:
+        Host: ${sts}${domain}
+    udp: true
+  - name: DIGI-BOSSTER-${user}
+    server: 162.159.134.61
+    port: $none
+    type: vless
+    uuid: ${uuid}
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ${sts}${domain}
+    network: ws
+    ws-opts:
+      path: $patch
+      headers:
+        Host: ${sts}${domain}
+    udp: true
+  - name: UMOBILE-FUNZ-${user}
+    server: ${sts}${domain}
+    port: $none
+    type: vless
+    uuid: ${uuid}
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ${sts}${domain}
+    network: ws
+    ws-opts:
+      path: $patch
+      headers:
+        Host: m.pubgmobile.com
+    udp: true
+  - name: YES-${user}
+    server: 104.17.113.188
+    port: $none
+    type: vless
+    uuid: ${uuid}
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ${sts}${domain}
+    network: ws
+    ws-opts:
+      path: $patch
+      headers:
+        Host: cdn.who.int.${sts}${domain}
+    udp: true
+  - name: SELCOM-0BASIC-$user
+    server: ${domain}
+    port: ${tls}
+    type: vless
+    uuid: ${uuid}
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername:
+    network: ws
+    ws-opts:
+      path: opensignal.com$patch
+      headers:
+        Host: opensignal.com
+    udp: true
+  - name: MAXIS-REBORN-${user}
+    server: zn0ejuwm5vp5oqszq-maxiscx.siteintercept.qualtrics.com
+    port: $none
+    type: vless
+    uuid: ${uuid}
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ${sts}${domain}
+    network: ws
+    ws-opts:
+      path: 
+      headers:
+        Host: zn0ejuwm5vp5oqszq-maxiscx.siteintercept.qualtrics.com.${sts}${domain}
+    udp: true
+proxy-groups:
+  - name: VLESS-AUTOSCRIPT-khaiVPN
+    type: select
+    proxies:
+      - DIGI-APN-$user
+      - DIGI-BOSSTER-$user
+      - UMOBILE-FUNZ-PLAN-$user
+      - YES-$user
+      - SELCOM-0BASIC-$user
+      - MAXIS-REBORN-$user
+      - LOAD-BALANCE
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: round-robin
+    disable-udp: false
+    url: http://www.gstatic.com/generate_204
+    interval: '300'
+    proxies:
+      - DIGI-APN-$user
+      - DIGI-BOSSTER-$user
+      - UMOBILE-FUNZ-PLAN-$user
+      - YES-$user
+      - SELCOM-0BASIC-$user
+      - MAXIS-REBORN-$user
+rules:
+  - MATCH,VLESS-AUTOSCRIPT-khaiVPN
+EOF
 
+# Copy config Yaml client ke home directory root agar mudah didownload ( YAML )
+mv /usr/local/etc/xray/$user-VLESS-WS.yaml /home/vps/public_html/$user-VLESS-WS.yaml
+vlesslink1="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=${sts}${domain}&path=$patch&allowInsecure=1&sni=$sni#VLESS-TLS-${user}"
+vlesslink2="vless://${uuid}@${sts}${domain}:$none?type=ws&encryption=none&security=none&host=$sni&path=$patch#VLESS-NTLS-${user}"
+vlesslink3="vless://${uuid}@api.useinsider.com:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-DIGI-APN-${user}"
+vlesslink4="vless://${uuid}@162.159.134.61:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-DIGI-BOSSTER-${user}"
+vlesslink5="vless://${uuid}@${domain}:$none?type=ws&encryption=none&security=none&host=${sts}m.pubgmobile.com&path=$patch#VLESS-NTLS-UMOBILE-FUNZ-${user}"
+vlesslink6="vless://${uuid}@104.17.113.188:$none?type=ws&encryption=none&security=none&host=${sts}cdn.who.int.${domain}&path=$patch#VLESS-NTLS-YES-${user}"
+vlesslink7="vless://${uuid}@${sts}${domain}:$tls?type=ws&encryption=none&security=tls&host=opensignal.com&path=$patch&allowInsecure=1&sni=opensignal.com$sni#VLESS-TLS-SELCOM-0BASIC-${user}"
+vlesslink8="vless://${uuid}@zn0ejuwm5vp5oqszq-maxiscx.siteintercept.qualtrics.com:$none?type=ws&encryption=none&security=none&host=${sts}zn0ejuwm5vp5oqszq-maxiscx.siteintercept.qualtrics.com.${domain}&path=#VLESS-NTLS-MAXIS-REBORN-${user}"
 systemctl restart xray@vless
-systemctl restart xray@vlessnone
+systemctl restart xray@vnone
 
 clear
 echo -e ""
@@ -884,11 +1033,23 @@ echo -e "Path Tls         : $patchtls"
 echo -e "Path None Tls    : $patchnontls"
 echo -e "allowInsecure    : True/allow"
 echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Script By $creditt"
-echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UMOBILE-FUNZ : ${vlesslink5}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link YES          : ${vlesslink6}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link MAXIS-REBORN : ${vlesslink8}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link Yaml  : http://$MYIP:81/$user-VLESS-WS.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
