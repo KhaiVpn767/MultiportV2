@@ -867,7 +867,7 @@ export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&en
 export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=vless&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1127,6 +1127,14 @@ export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.&type=ws#YES-${user}"
+export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+
+systemctl restart xray@vless
+systemctl restart xray@vlessnone
 
 clear
 echo -e ""
@@ -1151,8 +1159,20 @@ echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UMOBILE-FUNZ : ${vlesslink5}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link YES          : ${vlesslink6}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
