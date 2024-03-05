@@ -863,6 +863,8 @@ sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?type=ws&encryption=none&security=none&host=${sts}${domain}&path=$patch#VLESS-NTLS-DIGI-BOSSTER-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -889,6 +891,10 @@ echo -e "\e[$line═════════════════════
 echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
