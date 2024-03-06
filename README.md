@@ -129,6 +129,7 @@ or
 
 
 <p align="center">
-  <a><img src="https://img.shields.io/badge/Copyright%20©-Onyx%20AutoScriptVPN%202023.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
+  <a><img src="https://img.shields.io/badge/Copyright%20©-Onyx%20AutoScript khaiVPN%202024.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
     </p>
    </p>
+
