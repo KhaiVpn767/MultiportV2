@@ -53,7 +53,7 @@ echo -e "   \e[$line════════════════════
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "\e[$line"
-read -p "    Please Input Number  [1-99 or x] :  "  sys
+read -p "    Please Input Number  [1-99 or 0] :  "  sys
 echo -e ""
 case $sys in
 1)
@@ -122,7 +122,7 @@ wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh &
 99)
 wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/KhaiVpn767/MultiportV3/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
-x)
+0)
 menu
 ;;
 *)
