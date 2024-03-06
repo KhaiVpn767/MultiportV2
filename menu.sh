@@ -127,11 +127,11 @@ echo -e " \e[$line╒═══════════════════�
 echo -e "  \e[$back_text                    \e[30m[\e[$box SERVER INFORMATION\e[30m ]\e[1m                  \e[m"
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
 echo -e "  \e[$text Cpu Model            :$cname"
-echo -e "  \e[$text Cpu Frequency        :$freq MHz"
+#echo -e "  \e[$text Cpu Frequency        :$freq MHz"
 echo -e "  \e[$text Number Of Core       : $cores"
 echo -e "  \e[$text CPU Usage            : $cpu_usage"
-echo -e "  \e[$text Operating System     : "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)
-echo -e "  \e[$text Kernel               : $(uname -r)"
+#echo -e "  \e[$text Operating System     : "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)
+#echo -e "  \e[$text Kernel               : $(uname -r)"
 echo -e "  \e[$text RAM Info             : $uram MB / $tram MB"
 echo -e "  \e[$text System Uptime        : $uptime"
 echo -e "  \e[$text Ip Vps/Address       : $IPVPS"
