@@ -198,7 +198,7 @@ rm -f /root/set-br.sh
 # Colour Default
 echo "1;34m" > /etc/banner
 echo "30m" > /etc/box
-echo "1;34m" > /etc/line
+echo "1;33m" > /etc/line
 echo "1;37m" > /etc/text
 echo "1;37m" > /etc/below
 echo "47m" > /etc/back
