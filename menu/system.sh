@@ -49,6 +49,7 @@ echo -e ""
 echo -e "   \e[$number (77)\e[m \e[$below ADD NS-DOMAIN/SlowDNS\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Install UDP Custom\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Change XrayCore Official 1.7.5\e[m"
+echo -e ""
 echo -e "   \e[$number (•0)\e[m"
 echo -e "\e[$line"
 read -p "    Please Input Number  [1-99 or 0] :  "  sys
