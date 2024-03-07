@@ -57,8 +57,7 @@ echo -e "   \e[$number (•5)\e[m \e[$below Change Port Xray Core\e[m"
 echo -e "   \e[$number (•6)\e[m \e[$below Change Port Squid Proxy\e[m"
 echo -e ""
 echo -e "   \e[$line═══════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)  MENU                             \e[m"
-echo -e "   \e[$line═══════════════════════════════════════\e[m"
+echo -e "   \e[$number (•0)\e[m \e[$below MENU\e[m"
 echo -e ""
 read -p "     Select From Options [1-8 or x] :  " port
 echo -e ""
@@ -81,7 +80,7 @@ port-xray
 6)
 port-squid
 ;;
-x)
+0)
 clear
 menu
 ;;
