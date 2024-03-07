@@ -64,11 +64,11 @@ echo -e "    \e[$number (13)\e[m \e[$below User Password\e[m"
 echo -e "    \e[$number (14)\e[m \e[$below Restart Service Dropbear, Squid3,\e[m"
 echo -e "          \e[$below OpenVPN & SSH\e[m"
 echo -e ""
+echo -e ""
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                               \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "\e[$line"
-read -p "       Please Input Number  [1-14 or x] :  "  ssh
+echo -e "    \e[$number (•0)\e[m \e[$below MENU\e[m"
+echo -e ""
+read -p "       Please Input Number  [1-14 or 0] :  "  ssh
 echo -e ""
 case $ssh in
 1)
@@ -113,7 +113,7 @@ user-password
 14)
 restart
 ;;
-x)
+0)
 menu
 ;;
 *)
