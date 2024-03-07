@@ -33,12 +33,39 @@ echo -e "\e[31mPermission Denied!\e[0m";
 echo -e "\e[31mPlease buy script first\e[0m"
 exit 0
 fi
+
+# // PROVIDED
+clear
+source /var/lib/premium-script/ipvps.conf
+export creditt=$(cat /root/provided)
+
+# // BANNER COLOUR
+export banner_colour=$(cat /etc/banner)
+
+# // TEXT ON BOX COLOUR
+export box=$(cat /etc/box)
+
+# // LINE COLOUR
+export line=$(cat /etc/line)
+
+# // TEXT COLOUR ON TOP
+export text=$(cat /etc/text)
+
+# // TEXT COLOUR BELOW
+export below=$(cat /etc/below)
+
+# // BACKGROUND TEXT COLOUR
+export back_text=$(cat /etc/back)
+
+# // NUMBER COLOUR
+export number=$(cat /etc/number)
+
 echo -e "\e[32mloading...\e[0m"
 clear
 echo -e ""
-echo -e "${yellow}══════════════════════════════════════${NC}"
-echo -e "\\E[0;46;37m         RESTART VPN SERVICE          \e[0m"
-echo -e "${yellow}══════════════════════════════════════${NC}"
+echo -e   "  \e[$line══════════════════════════════════════${NC}"
+echo -e   "  \e[$back_text         RESTART VPN SERVICE          \e[0m"
+echo -e   "  \e[$line══════════════════════════════════════${NC}"
 echo -e "  $green[${white}1${green}] ${green} Restart All Services$NC"
 echo -e "  $green[${white}2${green}] ${green} Restart OpenSSH$NC"
 echo -e "  $green[${white}3${green}] ${green} Restart Dropbear$NC"
@@ -51,9 +78,9 @@ echo -e "  $green[${white}9${green}] ${green} Restart Trojan Ws & Tcp Tls$NC"
 echo -e "  $green[${white}10${green}] ${green}Restart Badvpn$NC"
 echo -e "  $green[${white}11${green}] ${green}Restart OHP $NC"
 echo -e "  $green[${white}12${green}] ${green}Restart WebSocket$NC"
-echo -e "${yellow}══════════════════════════════════════${NC}"
-echo -e "\\E[0;46;37m        x)   MENU                     ${NC}"
-echo -e "${yellow}══════════════════════════════════════${NC}"
+echo -e   "  \e[$line══════════════════════════════════════${NC}"
+echo -e   "  \e[$back_text        x)   MENU                     ${NC}"
+echo -e   "  \e[$line══════════════════════════════════════${NC}"
 echo -e ""
 read -p "    Select From Options [1-12 or x] :" Restart
 echo -e ""
