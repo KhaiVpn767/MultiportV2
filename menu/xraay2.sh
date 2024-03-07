@@ -1618,11 +1618,11 @@ echo -e "    \e[$number (17)\e[m \e[$below Show Config Vless Xtls Account\e[m"
 echo -e "    \e[$number (18)\e[m \e[$below Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text  \e[$box x)   MENU                              \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
+echo -e "   \e[$line═══════════════════════════════════════\e[m"
+echo -e "   \e[$number (•0)\e[m \e[$below MENU\e[m"
+echo -e ""
 echo -e "\e[$line"
-read -rp "        Please Input Number  [1-18 or x] :  "  num
+read -rp "        Please Input Number  [1-18 or 0] :  "  num
 echo -e ""
 if [[ "$num" = "1" ]]; then
 menu1
@@ -1660,7 +1660,7 @@ elif [[ "$num" = "17" ]]; then
 menu17
 elif [[ "$num" = "18" ]]; then
 menu18
-elif [[ "$num" = "x" ]]; then
+elif [[ "$num" = "0" ]]; then
 menu
 else
 clear
