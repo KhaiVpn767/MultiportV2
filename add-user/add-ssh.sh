@@ -145,7 +145,7 @@ echo -e "\e[$line═════════════════════
 echo ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
 echo ""
-echo -e "   \e[$back_text  \e[$box 0) \e[m"
+echo -e "    \e[$number(0) \e[m"
 echo ""
 read -rp "        Please Input Number  [•0] :  "  num
 echo -e ""
