@@ -143,11 +143,13 @@ echo -e "\e[$line═════════════════════
 echo -e "PAYLOAD WS OVPN  : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo ""
-echo -e "    \e[$number (•0)
+echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
 echo ""
-read -rp "        Please Input Number  [0] :  "  num
+echo -e "   \e[$back_text  \e[$box 0) \e[m"
+echo ""
+read -rp "        Please Input Number  [•0] :  "  num
 echo -e ""
-elif [[ "$num" = "0" ]]; then
+if [[ "$num" = "0" ]]; then
 menu
 else
 clear
