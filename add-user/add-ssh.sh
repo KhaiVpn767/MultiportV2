@@ -143,17 +143,6 @@ echo -e "\e[$line═════════════════════
 echo -e "PAYLOAD WS OVPN  : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo ""
-echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
 echo ""
-echo -e "    \e[$number(0) \e[m"
-echo ""
-echo -e "    \e[$number (•0)\e[m \e[$below Check User Login MENU\e[m"
-echo -e ""
-if [[ "$num" = "0" ]]; then
-menu
-else
-clear
-echo -e "\e[1;31mYou Entered The Wrong Number, Please Try Again!\e[0m"
-sleep 1
+read -n 1 -s -r -p "Press any key to back on menu ssh"
 ssh
-fi
