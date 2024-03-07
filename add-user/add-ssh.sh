@@ -103,7 +103,7 @@ echo -e "Username         : $Login"
 echo -e "Password         : $Pass"
 echo -e "Created          : $harini"
 echo -e "Expired          : $exp1"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Domain           : $domain"
 echo -e "Name Server(NS)  : $nsdomain1"
 echo -e "Pubkey           : $pubkey1"
@@ -143,3 +143,15 @@ echo -e "\e[$line═════════════════════
 echo -e "PAYLOAD WS OVPN  : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo ""
+echo -e "    \e[$number (•0)
+echo ""
+read -rp "        Please Input Number  [0] :  "  num
+echo -e ""
+elif [[ "$num" = "0" ]]; then
+menu
+else
+clear
+echo -e "\e[1;31mYou Entered The Wrong Number, Please Try Again!\e[0m"
+sleep 1
+ssh
+fi
