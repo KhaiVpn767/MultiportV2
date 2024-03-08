@@ -149,12 +149,6 @@ sleep 1
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear 
-#Instal slowdns
-echo -e "\e[0;32mINSTALLING SlowDNS...\e[0m"
-sleep 2
-wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
-echo -e "\e[0;32mDONE Install SLDNS\e[0m"
-clear
 #install Xray
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 1
@@ -179,12 +173,6 @@ echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
 sleep 1
 wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV5/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
-clear
-#install UDP-CUSTOM
-echo -e "\e[0;32mINSTALLING UDP-CUSTOM...\e[0m"
-sleep 1
-wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
-echo -e "\e[0;32mDONE INSTALLING UDP-CUSTOM...\e[0m"
 clear
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
