@@ -151,16 +151,15 @@ echo -e " \e[$below    $total_ssh         $vmess       $vless        $xtls      
 echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
 echo -e "  \e[$back_text                        \e[30m[\e[$box PANEL MENU\e[30m ]\e[1m                      \e[m"
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
-echo -e "  \e[$number (•1)\e[m \e[$below XRAY VMESS & VLESS\e[m"
-echo -e "  \e[$number (•2)\e[m \e[$below TROJAN XRAY & WS\e[m"
-echo -e "  \e[$number (•3)\e[m \e[$below SSHWS & OPENVPN\e[m"     
 echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
 echo -e "  \e[$back_text                        \e[30m[\e[$box VPS MENU\e[30m ]\e[1m                        \e[m"
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
-echo -e "  \e[$number (•4)\e[m \e[$below SYSTEM MENU\e[m          \e[$number (•8)\e[m \e[$below MENU THEMES\e[m"
-echo -e "  \e[$number (•5)\e[m \e[$below CHECK RUNNING\e[m        \e[$number (•9)\e[m \e[$below INFO ALL PORT\e[m"
-echo -e "  \e[$number (•6)\e[m \e[$below CHANGE PORT\e[m          \e[$number (10)\e[m \e[$below CLEAR EXPIRED FILES\e[m"
-echo -e "  \e[$number (•7)\e[m \e[$below REBOOT VPS\e[m           \e[$number (11)\e[m \e[$below CLEAR LOG VPS\e[m"
+echo -e "  \e[$number (•1)\e[m \e[$below XRAY VMESS & VLESS\e[m  \e[$number (•7)\e[m \e[$below REBOOT VPS\e[m"
+echo -e "  \e[$number (•2)\e[m \e[$below TROJAN XRAY & WS\e[m    \e[$number (•8)\e[m \e[$below MENU THEMES\e[m"
+echo -e "  \e[$number (•3)\e[m \e[$below SSHWS & OPENVPN\e[m     \e[$number (•9)\e[m \e[$below INFO ALL PORT\e[m"
+echo -e "  \e[$number (•4)\e[m \e[$below SYSTEM MENU\e[m         \e[$number (10)\e[m \e[$below CLEAR EXPIRED FILES\e[m"
+echo -e "  \e[$number (•5)\e[m \e[$below CHECK RUNNING\e[m       \e[$number (11)\e[m \e[$below CLEAR LOG VPS\e[m"
+echo -e "  \e[$number (•6)\e[m \e[$below CHANGE PORT\e[m         \e[$number (12)\e[m \e[$below CLEAR SAMPAH\e[m"
 echo -e ""
 echo -e "  \e[$below[Ctrl + C] For exit from main menu\e[m"
 echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
@@ -205,6 +204,9 @@ case $menu in
     ;;
 11)
     clear-log
+    ;;
+12)
+    wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/clearcache.sh && chmod +x clearcache.sh && ./clearcache.sh
     ;;
 x)
     clear
