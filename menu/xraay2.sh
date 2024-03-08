@@ -867,7 +867,7 @@ export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&en
 export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-0-BASIC-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -959,7 +959,7 @@ export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&en
 export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-0-BASIC-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1148,7 +1148,7 @@ export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&en
 export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-0-BASIC-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
