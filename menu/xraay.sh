@@ -87,8 +87,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-export patchtls=/KhaiVpn767-vmesswstls
-export patchnontls=/KhaiVpn767-vmesswsntls
+export patchtls=/vmess
+export patchnontls=/vmess
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -268,8 +268,11 @@ echo -e "Link None TLS  : ${vmesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -291,8 +294,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 
 # // Make Random Username 
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
-export patchtls=/KhaiVpn767-vmesswstls
-export patchnontls=/KhaiVpn767-vmesswsntls
+export patchtls=/vmess
+export patchnontls=/vmess
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -470,8 +473,11 @@ echo -e "Link None TLS  : ${vmesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -610,8 +616,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-export patchtls=/KhaiVpn767-vmesswstls
-export patchnontls=/KhaiVpn767-vmesswsntls
+export patchtls=/vmess
+export patchnontls=/vmess
 export user=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 export harini=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 export exp=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
@@ -767,8 +773,11 @@ echo -e "Link None TLS  : ${vmesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -837,8 +846,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-export patchtls=/KhaiVpn767-vlesswstls
-export patchnontls=/KhaiVpn767-vlesswsntls
+export patchtls=/vless
+export patchnontls=/vless
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -863,6 +872,11 @@ sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
+export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -890,8 +904,21 @@ echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UMOBILE-FUNZ : ${vlesslink5}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link YES          : ${vlesslink6}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -914,8 +941,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 # Make Random Username 
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 
-export patchtls=/KhaiVpn767-vlesswstls
-export patchnontls=/KhaiVpn767-vlesswsntls
+export patchtls=/vless
+export patchnontls=/vless
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -938,6 +965,11 @@ sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
+export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -945,7 +977,7 @@ systemctl restart xray@vlessnone
 clear
 echo -e ""
 echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "\e[$back_text     \e[30m[\e[$box TRIAL XRAY VLESS WS\e[30m ]\e[1m     \e[m"
+echo -e "\e[$back_text      \e[30m[\e[$box XRAY VLESS WS\e[30m ]\e[1m          \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks          : ${user}"
 echo -e "Domain           : ${domain}"
@@ -965,8 +997,21 @@ echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UMOBILE-FUNZ : ${vlesslink5}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link YES          : ${vlesslink6}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -1101,8 +1146,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-export patchtls=/KhaiVpn767-vlesswstls
-export patchnontls=/KhaiVpn767-vlesswsntls
+export patchtls=/vless
+export patchnontls=/vless
 export user=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 export harini=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 export exp=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
@@ -1110,6 +1155,14 @@ export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
+export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+
+systemctl restart xray@vless
+systemctl restart xray@vlessnone
 
 clear
 echo -e ""
@@ -1134,8 +1187,21 @@ echo -e "Link TLS         : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI APN     : ${vlesslink3}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link DIGI-BOSSTER : ${vlesslink4}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UMOBILE-FUNZ : ${vlesslink5}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link YES          : ${vlesslink6}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line════════════════════════\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -1248,8 +1314,11 @@ echo -e "Link Xtls Direct  : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created  : $harini"
-echo -e "Expired  : $exp"
+echo -e "\e[$line════════════════════════\e[m"
+echo -e "Created   : $harini"
+echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -1314,8 +1383,11 @@ echo -e "Link Xtls Direct  : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created  : $harini"
-echo -e "Expired  : $exp"
+echo -e "\e[$line════════════════════════\e[m"
+echo -e "Created   : $harini"
+echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
@@ -1476,8 +1548,11 @@ echo -e "Link Xtls Direct : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Xtls Splice : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created    : $harini"
-echo -e "Expired    : $exp"
+echo -e "\e[$line════════════════════════\e[m"
+echo -e "Created   : $harini"
+echo -e "Expired   : $exp"
+echo -e "SerVer    : $creditt"
+echo -e "\e[$line════════════════════════\e[m"
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
