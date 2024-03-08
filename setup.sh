@@ -21,9 +21,9 @@ echo ''
 echo "                                                              "
 echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By khaiVPN"$NC
+echo -e "$Lyellow                  Autoscript By KhaiVpn767"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @khaivpn"$NC
+echo -e "$Lyellow                       @KhaiVpn767"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Wait 6 Seconds!"$NC
@@ -50,7 +50,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT khaiVPN..\e[0m"
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT KhaiVpn767..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -63,7 +63,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT khaiVPN..\e[0m"
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT KhaiVpn767..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -148,11 +148,17 @@ echo -e "\e[0;32mINSTALLING SSH & OVPN...\e[0m"
 sleep 1
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
+clear 
+#Instal slowdns
+echo -e "\e[0;32mINSTALLING SlowDNS...\e[0m"
+sleep 2
+wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+echo -e "\e[0;32mDONE Install SLDNS\e[0m"
 clear
 #install Xray
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ins-xray.sh && chmod +x ins-xray.sh && screen -S ins-xray ./ins-xray.sh
+wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ins-xray2.sh && chmod +x ins-xray2.sh && screen -S ins-xray ./ins-xray2.sh
 echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
 clear
 #install ohp-server
@@ -171,8 +177,14 @@ clear
 #install SET-BR
 echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV5/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
+clear
+#install UDP-CUSTOM
+echo -e "\e[0;32mINSTALLING UDP-CUSTOM...\e[0m"
+sleep 1
+wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
+echo -e "\e[0;32mDONE INSTALLING UDP-CUSTOM...\e[0m"
 clear
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
@@ -196,14 +208,14 @@ rm -f /root/ohp-ssh.sh
 rm -f /root/websocket.sh
 rm -f /root/set-br.sh
 # Colour Default
-echo "1;34m" > /etc/banner
+echo "1;33m" > /etc/banner
 echo "30m" > /etc/box
 echo "1;33m" > /etc/line
 echo "1;37m" > /etc/text
 echo "1;37m" > /etc/below
 echo "47m" > /etc/back
 echo "1;35m" > /etc/number
-echo Standard > /usr/bin/test
+echo 3d > /usr/bin/test
 # Version
 ver=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf )
 history -c
@@ -268,16 +280,16 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;32m══════════════════ Autoscript By khaiVPN ══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════ Autoscript By KhaiVpn767 ══════════════════\e[0m" | tee -a log-install.txt
 sleep 7
 clear
 echo ""
 echo -e "    \e[1;32m.------------------------------------------.\e[0m"
 echo -e "    \e[1;32m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
-echo -e "    \e[1;32m|         PREMIUM BY khaiVPN          |\e[0m"
+echo -e "    \e[1;32m|         PREMIUM BY KhaiVpn767          |\e[0m"
 echo -e "    \e[1;32m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
-rm -r setup.sh
+rm -r setup2.sh
 sleep 5
 reboot
