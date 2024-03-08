@@ -141,36 +141,49 @@ clear
 fi
 echo ""
 clear
-echo -e "\e[0;32mREADY FOR INSTALLATION SCRIPT...\e[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta READY FOR INSTALLATION SCRIPT          $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 #install ssh ovpn
-echo -e "\e[0;32mINSTALLING SSH & OVPN...\e[0m"
-sleep 1
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta     INSTALLING SSH & OVPN              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear 
 #install Xray
-echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
-sleep 1
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta      INSTALLING XRAY CORE              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ins-xray2.sh && chmod +x ins-xray2.sh && screen -S ins-xray ./ins-xray2.sh
 echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
 clear
 #install ohp-server
-echo -e "\e[0;32mINSTALLING OHP PORT...\e[0m"
-sleep 1
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta       INSTALLING OHP PORT              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 echo -e "\e[0;32mDONE INSTALLING OHP PORT\e[0m"
 clear
 #install websocket
-echo -e "\e[0;32mINSTALLING WEBSOCKET PORT...\e[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta   INSTALLING WEBSOCKET PORT            $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
 wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 echo -e "\e[0;32mDONE INSTALLING WEBSOCKET PORT\e[0m"
 clear
 #install SET-BR
-echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
-sleep 1
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$Magenta        INSTALLING SET-BR               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
 wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV5/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
@@ -268,14 +281,14 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;32m══════════════════ Autoscript By KhaiVpn767 ══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;33m══════════════════ Autoscript By KhaiVpn767 ══════════════════\e[0m" | tee -a log-install.txt
 sleep 7
 clear
 echo ""
-echo -e "    \e[1;32m.------------------------------------------.\e[0m"
-echo -e "    \e[1;32m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
-echo -e "    \e[1;32m|         PREMIUM BY KhaiVpn767          |\e[0m"
-echo -e "    \e[1;32m'------------------------------------------'\e[0m"
+echo -e "    \e[1;31m.------------------------------------------.\e[0m"
+echo -e "    \e[1;33m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
+echo -e "    \e[1;33m|           PREMIUM BY KhaiVpn          |\e[0m"
+echo -e "    \e[1;31m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
 rm -r setup2.sh
