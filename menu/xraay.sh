@@ -872,11 +872,11 @@ sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -965,12 +965,11 @@ sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
-
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
 
@@ -1155,11 +1154,11 @@ export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 
 
 export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
-export vlesslink7="vless://${uuid}@${domain}:$tls?security=tls&encryption=none&type=ws&headerType=none&path=$patchnontls&sni=opensignal.com&host=opensignal.com#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
+export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1640,10 +1639,9 @@ echo -e "    \e[$number (18)\e[m \e[$below Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
 echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text  \e[$box x)   MENU                              \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "\e[$line"
-read -rp "        Please Input Number  [1-18 or x] :  "  num
+echo -e "    \e[$number (•0)\e[m \e[$below MENU\e[m"
+echo -e ""
+read -rp "        Please Input Number  [1-18 or 0] :  "  num
 echo -e ""
 if [[ "$num" = "1" ]]; then
 menu1
@@ -1681,7 +1679,7 @@ elif [[ "$num" = "17" ]]; then
 menu17
 elif [[ "$num" = "18" ]]; then
 menu18
-elif [[ "$num" = "x" ]]; then
+elif [[ "$num" = "0" ]]; then
 menu
 else
 clear
