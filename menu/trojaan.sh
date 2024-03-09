@@ -787,11 +787,10 @@ echo -e "   \e[$number (11)\e[m \e[$below Show Config Trojan WS TLS Account\e[m"
 echo -e "   \e[$number (12)\e[m \e[$below Check User Login Trojan WS TLS\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total2} Client\e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "\e[$line"
-read -rp "      Please Input Number  [1-12 or x] :  "  num
+echo -e "   \e[$line══════════════════════════════════════════\e[m"
+echo -e "    \e[$number (•0)\e[m \e[$below MENU\e[m"
+echo -e ""
+read -rp "      Please Input Number  [1-12 or 0] :  "  num
 echo -e ""
 if [[ "$num" = "1" ]]; then
 menu1
@@ -817,7 +816,7 @@ elif [[ "$num" = "11" ]]; then
 menu11
 elif [[ "$num" = "12" ]]; then
 menu12
-elif [[ "$num" = "x" ]]; then
+elif [[ "$num" = "0" ]]; then
 menu
 else
 clear
