@@ -1332,11 +1332,10 @@ echo -e "   \e[$number (•9)\e[m \e[$below Change Colour Of The Number Menu\e[m
 echo -e "   \e[$number (10)\e[m \e[$below Change Vps Provider Name\e[m"
 echo -e "   \e[$number (11)\e[m \e[$below Change Theme Style\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Main Menu                          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "\e[$line"
-read -rp "  Please Enter 1-11 or x : " -e num
+echo -e "   \e[$line══════════════════════════════════════════\e[m"
+echo -e "    \e[$number (•0)\e[m \e[$below MENU\e[m"
+echo -e ""
+read -rp "  Please Enter 1-11 or 0 : " -e num
 if [[ "$num" = "1" ]]; then
 menu1
 elif [[ "$num" = "2" ]]; then
@@ -1359,7 +1358,7 @@ elif [[ "$num" = "10" ]]; then
 menu10
 elif [[ "$num" = "11" ]]; then
 menu11
-elif [[ "$num" = "x" ]]; then
+elif [[ "$num" = "0" ]]; then
 menu
 else
 clear
