@@ -21,9 +21,9 @@ echo ''
 echo "                                                              "
 echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By KhaiVpn767"$NC
+echo -e "$Lyellow                  Autoscript By KhaiVpn"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @KhaiVpn767"$NC
+echo -e "$Lyellow                       @Khaivpn"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Wait 6 Seconds!"$NC
