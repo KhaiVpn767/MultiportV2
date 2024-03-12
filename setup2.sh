@@ -310,3 +310,7 @@ echo -e "   \e[1;34mYour VPS Will Be Automatical Reboot In 7 seconds\e[0m"
 rm -r setup2.sh
 sleep 7
 reboot
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu menu"
+menu
+}
