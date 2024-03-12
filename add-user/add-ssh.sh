@@ -50,7 +50,6 @@ echo -e   "  \e[$back_text           \e[30m[\e[$box CREATE USER SSH & OPENVPN\e[
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
 read -p "   Username : " Login
 read -p "   Password : " Pass
-read -p "   Bug SNI/Host (Example : m.facebook.com) : " sni
 read -p "   Expired (days): " masaaktif
 
 IP=$(wget -qO- icanhazip.com);
@@ -99,14 +98,17 @@ echo -e ""
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo -e "\e[$back_text         \e[30m[\e[$box Informasi Account SSH & OpenVPN\e[30m ]\e[1m           \e[m"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line══════════════════════\e[m"
 echo -e "Username         : $Login"
 echo -e "Password         : $Pass"
 echo -e "Created          : $harini"
 echo -e "Expired          : $exp1"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line══════════════════════\e[m"
 echo -e "Domain           : $domain"
 echo -e "Name Server(NS)  : $nsdomain1"
+echo -e "\e[$line══════════════════════\e[m"
 echo -e "Pubkey           : $pubkey1"
+echo -e "\e[$line══════════════════════\e[m"
 echo -e "IP/Host          : $MYIP"
 echo -e "OpenSSH          : 22"
 echo -e "Dropbear         : 143, 109"
