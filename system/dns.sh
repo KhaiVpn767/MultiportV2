@@ -117,7 +117,7 @@ Font_Suffix="\033[0m";
 
 clear;
 echo -e "\033[0;33m════════════════════════════════════════════════════════════${NC}"
-echo -e "\\E[0;46;30m                    CHECK DNS REGION                        \E[0m"
+echo -e "\\E[0;47;30m                    CHECK DNS REGION                        \E[0m"
 echo -e "\033[0;33m════════════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "  \033[1;37m${Font_Purple}Media Stream Unlocker Test Mod By KhaiVPN${Font_Suffix}\033[0m";
