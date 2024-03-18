@@ -789,9 +789,9 @@ function menu6 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/vmess.json | grep '^#vms' | cut -d ' ' -f 2`); 
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m      ⇱ XRAY Vmess WS User Login  ⇲       \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
+echo -e "\E[0;47;30m      ⇱ XRAY Vmess WS User Login  ⇲       \E[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -1212,9 +1212,9 @@ function menu12 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/vless.json | grep '^#vls' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m      ⇱ XRAY Vless WS User Login ⇲        \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
+echo -e "\E[0;47;30m      ⇱ XRAY Vless WS User Login ⇲        \E[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -1563,9 +1563,9 @@ function menu18 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#vxtls' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m     ⇱ XRAY Vless Xtls User Login ⇲       \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
+echo -e "\E[0;47;30m     ⇱ XRAY Vless Xtls User Login ⇲       \E[0m"
+echo -e "\e[33m══════════════════════════════════════════\033[0m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
