@@ -107,7 +107,7 @@ wget -O add-host "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/
 wget -O check-sc "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/running.sh"
 wget -O cert "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/cert.sh"
 wget -O trojaan "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/trojaan.sh"
-wget -O xraay "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/xraay.sh"
+wget -O xraay2 "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/xraay2.sh"
 wget -O xp "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/xp.sh"
 wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/change-port/port-xray.sh"
 wget -O themes "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/themes.sh"
@@ -125,7 +125,7 @@ chmod +x add-host
 chmod +x check-sc
 chmod +x cert
 chmod +x trojaan
-chmod +x xraay
+chmod +x xraay2
 chmod +x xp
 chmod +x port-xray
 chmod +x themes
