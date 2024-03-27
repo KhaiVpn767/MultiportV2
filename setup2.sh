@@ -30,6 +30,12 @@ echo -e "$Lyellow                       Wait 6 Seconds!"$NC
 echo -e "$green.........................................................."$NC
 sleep 6
 clear
+####
+start=$(date +%s)
+secs_to_human() {
+    echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
+}
+
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
