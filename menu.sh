@@ -144,7 +144,7 @@ echo -e " \e[$line╒═══════════════════�
 echo -e "  \e[$text Traffic\e[0m       \e[${text}Today      Yesterday        Month   "
 echo -e "  \e[$text Download\e[0m   \e[${text}   $dtoday    $dyest       $dmon   \e[0m"
 echo -e "  \e[$text Upload\e[0m     \e[${text}   $utoday    $uyest       $umon   \e[0m"
-echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon  \e[0m "
+echo -e "  \e[$text Total\e[0m     \033[0;36m  ${text}   $ttoday    $tyest       $tmon  \e[0m "
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
 echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
 echo -e " \e[$text Ssh/Ovpn  Vmess  Vless  Vlessxtls  Trojan-Ws  Trojan-Tls \e[0m "    
