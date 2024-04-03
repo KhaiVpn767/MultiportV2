@@ -526,10 +526,10 @@ systemctl restart xray@vmessnone
 
 clear
 echo " XRAY VMESS WS Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -580,10 +580,10 @@ service cron restart
 clear
 echo ""
 echo " VMESS WS & Clash Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -877,6 +877,7 @@ export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryp
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
+export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -913,6 +914,8 @@ echo -e "\e[$line═════════════════════
 echo -e "Link YES          : ${vlesslink6}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Created   : $harini"
@@ -970,6 +973,8 @@ export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryp
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
+export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
+
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
 
@@ -1005,6 +1010,8 @@ echo -e "\e[$line═════════════════════
 echo -e "Link YES          : ${vlesslink6}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Created   : $harini"
@@ -1054,10 +1061,10 @@ systemctl restart xray@vlessnone
 
 clear
 echo " Xray Vless Ws Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1109,10 +1116,10 @@ service cron restart
 clear
 echo ""
 echo " VLESS WS Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1159,6 +1166,7 @@ export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryp
 export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
+export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1195,6 +1203,8 @@ echo -e "\e[$line═════════════════════
 echo -e "Link YES          : ${vlesslink6}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
+echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Created   : $harini"
@@ -1429,10 +1439,10 @@ systemctl restart xray.service
 
 clear
 echo " Xray Vless Tcp Xtls Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1483,10 +1493,10 @@ service cron restart
 clear
 echo ""
 echo " Xray Vless Tcp Xtls Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
