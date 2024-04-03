@@ -526,10 +526,10 @@ systemctl restart xray@vmessnone
 
 clear
 echo " XRAY VMESS WS Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -580,10 +580,10 @@ service cron restart
 clear
 echo ""
 echo " VMESS WS & Clash Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1061,10 +1061,10 @@ systemctl restart xray@vlessnone
 
 clear
 echo " Xray Vless Ws Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1116,10 +1116,10 @@ service cron restart
 clear
 echo ""
 echo " VLESS WS Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1439,10 +1439,10 @@ systemctl restart xray.service
 
 clear
 echo " Xray Vless Tcp Xtls Account Deleted Successfully"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1493,10 +1493,10 @@ service cron restart
 clear
 echo ""
 echo " Xray Vless Tcp Xtls Account Was Successfully Renewed"
-echo " =========================="
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
-echo " =========================="
+echo -e "\e[$line══════════════════════\e[m"
+echo -e "Client Name : $user"
+echo -e "Expired On  : $exp4"
+echo -e "\e[$line══════════════════════\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
