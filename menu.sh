@@ -207,7 +207,7 @@ case $menu in
     clear-log
     ;;
 12)
-    wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/clearcache.sh && chmod +x clearcache.sh && ./clearcache.sh
+    clearcache
     ;;
 x)
     clear
