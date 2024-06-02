@@ -269,6 +269,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -474,6 +475,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -775,6 +777,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -919,6 +922,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -1015,6 +1019,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -1209,6 +1214,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link UNIFI        : ${vlesslink8}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -1233,10 +1239,10 @@ if [[ -z "$akun" ]]; then
 akun="tidakada"
 fi
 echo -n > /tmp/ipvless.txt
-data2=( `cat /var/log/xray/access2.log | tail -n 500 | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq`);
+data2=( `netstat -anp | grep ESTABLISHED | grep tcp6 | grep xray | awk '{print $5}' | cut -d: -f1 | sort | uniq`);
 for ip in "${data2[@]}"
 do
-jum=$(cat /var/log/xray/access2.log | grep -w "$akun" | tail -n 500 | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | grep -w "$ip" | sort | uniq)
+jum=$(cat /var/log/xray/access.log | grep -w $akun | awk '{print $3}' | cut -d: -f1 | grep -w $ip | sort | uniq)
 if [[ "$jum" = "$ip" ]]; then
 echo "$jum" >> /tmp/ipvless.txt
 else
@@ -1326,6 +1332,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -1395,6 +1402,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
@@ -1562,6 +1570,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Xtls Splice : ${vlesslink2}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
+echo -e "Name      : ${user}"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
 echo -e "SerVer    : $creditt"
