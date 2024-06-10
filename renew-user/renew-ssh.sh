@@ -50,11 +50,6 @@ echo -e "    Days Added      :  $Days Days"
 echo -e "    Expires on      :  $Expiration_Display"
 echo -e ""
 echo -e "════════════════════════════════════════"
-echo ""
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu ssh"
-ssh
-}
 echo -e ""
 echo -e "════════════════════════════════════════"
 echo -e ""
