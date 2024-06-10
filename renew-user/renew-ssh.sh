@@ -50,10 +50,17 @@ echo -e "    Days Added      :  $Days Days"
 echo -e "    Expires on      :  $Expiration_Display"
 echo -e ""
 echo -e "════════════════════════════════════════"
+else
+clear
 echo -e ""
-echo -e "════════════════════════════════════════"
+echo -e "======================================"
 echo -e ""
 echo -e "        Username Doesnt Exist         "
 echo -e ""
-echo -e "════════════════════════════════════════"
+echo -e "======================================"
+echo ""
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu ssh"
+ssh
+}
 fi
