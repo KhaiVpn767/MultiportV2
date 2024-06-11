@@ -115,7 +115,7 @@ wget -O autobackup "https://raw.githubusercontent.com/${GitUser}/MultiportV2/mai
 wget -O backup "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/backup.sh"
 wget -O bckp "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/bckp.sh"
 wget -O restore "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/restore.sh"
-wget -O ssh "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ssh-vpn.sh"
+wget -O ssh "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/ssh.sh"
 chmod +x update
 chmod +x run-update
 chmod +x message-ssh
