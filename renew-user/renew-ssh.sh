@@ -58,4 +58,9 @@ echo -e ""
 echo -e "        Username Doesnt Exist         "
 echo -e ""
 echo -e "======================================"
+echo ""
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu ssh"
+ssh
+}
 fi
