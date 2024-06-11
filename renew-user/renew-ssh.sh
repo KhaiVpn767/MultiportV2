@@ -31,7 +31,7 @@ clear
 read -p " Username :  " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-read -p "         Day Extend     :  " Days
+read -p " Day Extend :  " Days
 Today=`date +%s`
 Days_Detailed=$(( $Days * 86400 ))
 Expire_On=$(($Today + $Days_Detailed))
@@ -58,9 +58,8 @@ echo -e ""
 echo -e "        Username Doesnt Exist         "
 echo -e ""
 echo -e "======================================"
+fi
 echo ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu ssh"
 ssh
-}
-fi
