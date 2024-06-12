@@ -17,7 +17,7 @@ echo -e "\e[33m╘════════════════════�
  [\033[1;35m•2\033[0m]\033[1;33m  Permanent DNS\033[0m
  [\033[1;35m•3\033[0m]\033[1;33m  Reset DNS To Default\033[0m"
 echo -e " [\033[1;35m•4\033[0m]\033[1;33m  Check Media\033[0m"
-echo -e " [\033[1;35m•5\033[0m]\033[1;33m  Back To Main Menu\033[0m"
+echo -e " [\033[1;35m•0\033[0m]\033[1;33m  Back To Main Menu\033[0m"
 echo""
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
@@ -415,7 +415,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 ;;
-5)
+0)
 clear
 menu
 ;;
