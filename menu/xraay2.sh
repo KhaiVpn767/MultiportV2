@@ -882,8 +882,6 @@ export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-BEBAS-${user}"
-export vlesslink9="vless://${uuid}@speedtest.unifi.com.my.${domain}:$none?path=$patchnontls&encryption=none&host=&type=ws#Server:$creditt-UNIFI-UNI5G-${user}"
-export vlesslink10="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=yoodo.zendesk.com&type=ws#Server:$creditt-Yoodo-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -922,10 +920,6 @@ echo -e "\e[$line═════════════════════
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link UNIFI-BEBAS  : ${vlesslink8}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link UNIFI-UNI5G  : ${vlesslink9}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Yoodo        : ${vlesslink10}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Name      : ${user}"
@@ -985,8 +979,6 @@ export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-BEBAS-${user}"
-export vlesslink9="vless://${uuid}@speedtest.unifi.com.my.${domain}:$none?path=$patchnontls&encryption=none&host=&type=ws#Server:$creditt-UNIFI-UNI5G-${user}"
-export vlesslink10="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=yoodo.zendesk.com&type=ws#Server:$creditt-Yoodo-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1025,10 +1017,6 @@ echo -e "\e[$line═════════════════════
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link UNIFI-BEBAS  : ${vlesslink8}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link UNIFI-UNI5G  : ${vlesslink9}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Yoodo        : ${vlesslink10}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Name      : ${user}"
@@ -1186,8 +1174,6 @@ export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=
 export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
 export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-BEBAS-${user}"
-export vlesslink9="vless://${uuid}@speedtest.unifi.com.my.${domain}:$none?path=$patchnontls&encryption=none&host=&type=ws#Server:$creditt-UNIFI-UNI5G-${user}"
-export vlesslink10="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=yoodo.zendesk.com&type=ws#Server:$creditt-Yoodo-${user}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1226,10 +1212,6 @@ echo -e "\e[$line═════════════════════
 echo -e "Link SELCOM-0BASIC: ${vlesslink7}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link UNIFI-BEBAS  : ${vlesslink8}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link UNIFI-UNI5G  : ${vlesslink9}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Yoodo        : ${vlesslink10}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "\e[$line══════════════════════\e[m"
 echo -e "Name      : ${user}"
