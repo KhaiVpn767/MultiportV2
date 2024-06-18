@@ -313,6 +313,7 @@ wget -O nf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system
 wget -O dns "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/dns.sh"
 wget -O netf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/netf.sh"
 wget -O ins-helium "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/ins-helium.sh"
+wget -O clearcache "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/clearcache.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x add-ssh
@@ -365,6 +366,7 @@ chmod +x dns
 chmod +x nf
 chmod +x netf
 chmod +x ins-helium
+chmod +x clearcache
 echo "0 1 * * * root delete && xp" >> /etc/crontab
 echo "*/2 * * * * root clear-log" >> /etc/crontab
 echo "0 5 * * * root reboot" >> /etc/crontab
