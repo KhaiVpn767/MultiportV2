@@ -50,6 +50,3 @@ echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
 echo -e "Script By khaiVPN"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
