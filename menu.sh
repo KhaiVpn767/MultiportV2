@@ -1,4 +1,4 @@
-#!/bin/bash
+\#!/bin/bash
 #wget https://github.com/${GitUser}/
 GitUser="KhaiVpn767"
 #IZIN SCRIPT
@@ -207,7 +207,7 @@ case $menu in
     clear-log
     ;;
 12)
-    clearcache
+    wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/clearcache.sh && chmod +x clearcache.sh && ./clearcache.sh
     ;;
 x)
     clear
