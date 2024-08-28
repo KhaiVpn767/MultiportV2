@@ -53,10 +53,6 @@ else
 stl="${Error}"
 fi
 clear
-# Getting CPU Information
-cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
-cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
-cpu_usage+=" %"
 #Download/Upload today
 dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
 utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
@@ -129,7 +125,7 @@ echo -e " \e[$line╘═══════════════════�
 echo -e "  \e[$text Cpu Model            :$cname"
 #echo -e "  \e[$text Cpu Frequency        :$freq MHz"
 echo -e "  \e[$text Number Of Core       : $cores"
-echo -e "  \e[$text CPU Usage            : $cpu_usage"
+#echo -e "  \e[$text CPU Usage            : $cpu_usage"
 #echo -e "  \e[$text Operating System     : "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)
 #echo -e "  \e[$text Kernel               : $(uname -r)"
 echo -e "  \e[$text RAM Info             : $uram MB / $tram MB"
