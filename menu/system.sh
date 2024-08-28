@@ -31,23 +31,25 @@ echo -e "   \e[$number (•2)\e[m \e[$below Renew Cert Xray Core\e[m"
 echo -e "   \e[$number (•3)\e[m \e[$below DNS Changer\e[m"
 echo -e "   \e[$number (•4)\e[m \e[$below Panel Domain\e[m"
 echo -e "   \e[$number (•5)\e[m \e[$below Backup Vps\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Restore Vps\e[m"
-echo -e "   \e[$number (•7)\e[m \e[$below Install Webmin\e[m"
-echo -e "   \e[$number (•8)\e[m \e[$below Setup Speed VPS\e[m"
-echo -e "   \e[$number (•9)\e[m \e[$below Restart VPN\e[m"
-echo -e "   \e[$number (10)\e[m \e[$below Speedtest VPS\e[m"
-echo -e "   \e[$number (11)\e[m \e[$below Xray Version\e[m"
-echo -e "   \e[$number (12)\e[m \e[$below Install BBR\e[m"
-echo -e "   \e[$number (13)\e[m \e[$below Install Ads Block\e[m"
-echo -e "   \e[$number (14)\e[m \e[$below Ads Block Panel\e[m"
-echo -e "   \e[$number (15)\e[m \e[$below ON/OF Auto Reboot\e[m"
-echo -e "   \e[$number (16)\e[m \e[$below Change Password VPS\e[m"
-echo -e "   \e[$number (17)\e[m \e[$below Check CPU & RAM\e[m"
-echo -e "   \e[$number (18)\e[m \e[$below Change Banner SSH\e[m"
+echo -e "   \e[$number (•6)\e[m \e[$below Backup Vps/bot telegram\e[m"
+echo -e "   \e[$number (•7)\e[m \e[$below Restore Vps\e[m"
+echo -e "   \e[$number (•8)\e[m \e[$below Install Webmin\e[m"
+echo -e "   \e[$number (•9)\e[m \e[$below Setup Speed VPS\e[m"
+echo -e "   \e[$number (•10)\e[m \e[$below Restart VPN\e[m"
+echo -e "   \e[$number (11)\e[m \e[$below Speedtest VPS\e[m"
+echo -e "   \e[$number (12)\e[m \e[$below Xray Version\e[m"
+echo -e "   \e[$number (13)\e[m \e[$below Install BBR\e[m"
+echo -e "   \e[$number (14)\e[m \e[$below Install Ads Block\e[m"
+echo -e "   \e[$number (15)\e[m \e[$below Ads Block Panel\e[m"
+echo -e "   \e[$number (16)\e[m \e[$below ON/OF Auto Reboot\e[m"
+echo -e "   \e[$number (17)\e[m \e[$below Change Password VPS\e[m"
+echo -e "   \e[$number (18)\e[m \e[$below Check CPU & RAM\e[m"
+echo -e "   \e[$number (19)\e[m \e[$below Change Banner SSH\e[m"
 echo -e ""
 echo -e "   \e[$number (77)\e[m \e[$below ADD NS-DOMAIN/SlowDNS\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Install UDP Custom\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Change XrayCore Official 1.7.5\e[m"
+echo -e "   \e[$number (100)\e[m \e[$below Update\e[m"
 echo -e ""
 echo -e ""
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -72,42 +74,45 @@ panel-domain
 backup
 ;;
 6)
-restore
+wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/mbot-backup && chmod +x mbot-backup && ./mbot-backup
 ;;
 7)
-wbmn
+restore
 ;;
 8)
-limit-speed
+wbmn
 ;;
 9)
-restart
+limit-speed
 ;;
 10)
-speedtest
+restart
 ;;
 11)
-xray version
+speedtest
 ;;
 12)
-bbr
+xray version
 ;;
 13)
-ins-helium
+bbr
 ;;
 14)
-helium
+ins-helium
 ;;
 15)
-autoreboot
+helium
 ;;
 16)
-passwd
+autoreboot
 ;;
 17)
-htop
+passwd
 ;;
 18)
+htop
+;;
+19)
 message-ssh
 ;;
 77)
@@ -118,6 +123,9 @@ wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh &
 ;;
 99)
 wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/KhaiVpn767/MultiportV3/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
+;;
+100)
+wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
 ;;
 0)
 menu
