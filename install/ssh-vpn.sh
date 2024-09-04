@@ -314,6 +314,7 @@ wget -O dns "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/syste
 wget -O netf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/netf.sh"
 wget -O ins-helium "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/ins-helium.sh"
 wget -O clearcache "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/clearcache.sh"
+wget -0 autobackup "https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/system/autobackup"
 chmod +x add-host
 chmod +x menu
 chmod +x add-ssh
@@ -367,6 +368,7 @@ chmod +x nf
 chmod +x netf
 chmod +x ins-helium
 chmod +x clearcache
+chmod +x autobackup
 echo "0 1 * * * root delete && xp" >> /etc/crontab
 echo "*/2 * * * * root clear-log" >> /etc/crontab
 echo "0 5 * * * root reboot" >> /etc/crontab
