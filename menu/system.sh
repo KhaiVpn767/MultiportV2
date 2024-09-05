@@ -31,7 +31,7 @@ echo -e "   \e[$number (•2)\e[m \e[$below Renew Cert Xray Core\e[m"
 echo -e "   \e[$number (•3)\e[m \e[$below DNS Changer\e[m"
 echo -e "   \e[$number (•4)\e[m \e[$below Panel Domain\e[m"
 echo -e "   \e[$number (•5)\e[m \e[$below Backup Vps\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Backup Vps/bot telegram\e[m"
+echo -e "   \e[$number (•6)\e[m \e[$below autobackup\e[m"
 echo -e "   \e[$number (•7)\e[m \e[$below Restore Vps\e[m"
 echo -e "   \e[$number (•8)\e[m \e[$below Install Webmin\e[m"
 echo -e "   \e[$number (•9)\e[m \e[$below Setup Speed VPS\e[m"
@@ -74,7 +74,7 @@ panel-domain
 backup
 ;;
 6)
-wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/mbot-backup && chmod +x mbot-backup && ./mbot-backup
+autobackup
 ;;
 7)
 restore
